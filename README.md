@@ -1,112 +1,22 @@
-# CHIP-LE8
+# Association of Life's Essential 8 with Clonal Hematopoiesis and Coronary Artery Disease
 
-**LE8 Calculation:**
+In 2022, the American Heart Association introduced Life’s Essential 8 (LE8), a metric encompassing eight domains—diet, physical activity, nicotine exposure, sleep health, body mass index (BMI), blood lipids, blood glucose, and blood pressure—to quantify and monitor individual cardiovascular health (CVH). 
 
-/medpop/esp2/yxliu/LE8score_calculation/LE8scores.R
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ce88a954-b1c9-481d-b962-63806b594520" alt="image" width="400"/>
+</p>
 
-*Output file (txt):*
 
-/medpop/esp2/yxliu/updated_LE8score.txt
+Clonal hematopoiesis of indeterminate potential (CHIP) is an age-related phenomenon characterized by the expansion of hematopoietic stem cell clones harboring preleukemic driver mutations (DNMT3A, TET2, JAK2). These mutant clones gradually accumulate in the bone marrow over the lifespan, giving rise to a proinflammatory milieu that promotes atherosclerosis and other vascular complications. 
 
-**Cross-sectional Analysis:**
+<p align="center">
+  <img width="630" alt="image" src="https://github.com/user-attachments/assets/6d712950-8508-43f9-940b-3f81e6a9a7dd" />
+</p>
 
-/medpop/esp2/yxliu/updated_cross_sectional.R
+Despite mounting evidence that both poor CVH and CHIP independently contribute to CVD risk, it remains unclear whether LE8 mitigate the development of CHIP clones—and whether CHIP status modifies the protective impact of LE8 on CAD. In this project, we therefore aim to investigate the cross-sectional association between LE8 and prevalent CHIP mutations, as well as the joint contribution of LE8 and CHIP status to incident coronary artery disease. 
 
-*Output file (csv):*
+<p align="center">
+  <img width="550" alt="image" src="https://github.com/user-attachments/assets/39246a18-4f83-4a87-896c-a24e2b4bc04c" />
+</p>
 
-/medpop/esp2/yxliu/updated_5CHIP_LE8_association_results_VAF2.csv
 
-*Output plots:*
-
-LE8 composite
-
-/medpop/esp2/yxliu/Plots/LE8_composite_cat_VAF2.png
-
-/medpop/esp2/yxliu/Plots/LE8_composite_cat_VAF10.png
-
-/medpop/esp2/yxliu/Plots/LE8_composite_scaled_VAF2.png
-
-/medpop/esp2/yxliu/Plots/LE8_composite_scaled_VAF10.png
-
-/medpop/esp2/yxliu/Plots/LE8_composite_std_VAF2.png
-
-/medpop/esp2/yxliu/Plots/LE8_composite_std_VAF10.png
-
-LE8 individual
-
-/medpop/esp2/yxliu/Plots/forestplot_ASXL1_std_VAF2.png
-
-/medpop/esp2/yxliu/Plots/forestplot_CHIP_std_VAF2.png
-
-/medpop/esp2/yxliu/Plots/forestplot_DNMT3A_std_VAF2.png
-
-/medpop/esp2/yxliu/Plots/forestplot_nonDNMT3A_std_VAF2.png
-
-/medpop/esp2/yxliu/Plots/forestplot_TET2_std_VAF2.png
-
-**Stratified Analysis:**
-
-**1. Incidence**
-
-  1.1. LE8 composite (“high”, “intermediate”, “low”)
-  
-/medpop/esp2/yxliu/updated_stratified.R
-
-*Output file (txt):*
-
-/medpop/esp2/yxliu/updated_stratified_cox_results_VAF2.txt
-
-*Output plots:*
-
-/medpop/esp2/yxliu/Plots/incidence_CAD_composite.png
-
-/medpop/esp2/yxliu/Plots/incidence_CAD_death.png
-
-/medpop/esp2/yxliu/Plots/incidence_CAD_intermediate.png
-
-/medpop/esp2/yxliu/Plots/incidence_composite_CVD.png
-
-  1.2.  LE8 each individual
-  
-/medpop/esp2/yxliu/updated_stratified.R
-
-*Output file (txt):*
-
-/medpop/esp2/yxliu/stratified_cox_results_by_component.txt
-
-*Output plots:*
-
-/medpop/esp2/yxliu/Plots_by_component
-
-**2.  HR**
-
-/medpop/esp2/yxliu/Stratified_HR.R
-
-  2.1 Single-reference “No-CHIP & High” forest plots
-  
-*Output file (csv):*
-
-/medpop/esp2/yxliu/Results_HR_stratified.txt
-
-*Output plots:*
-
-/medpop/esp2/yxliu/Plots/HR_CAD_Composite.png
-
-/medpop/esp2/yxliu/Plots/HR_CAD_Death_HARD.png
-
-/medpop/esp2/yxliu/Plots/HR_Composite_CVD.png
-
-/medpop/esp2/yxliu/Plots/HR_intermediate_CAD.png
-
-  2.2 Unique ref = No-CHIP_High + within-subgroup comparisons
-  
-*Output file (csv):*
-
-/medpop/esp2/yxliu/Results_HR_stratified_v2.txt
-
-*Output plots:*
-
-/medpop/esp2/yxliu/Plots/V2_HR_CAD_Composite.png
-/medpop/esp2/yxliu/Plots/V2_HR_CAD_Death_HARD.png
-/medpop/esp2/yxliu/Plots/V2_HR_Composite_CVD.png
-/medpop/esp2/yxliu/Plots/V2_HR_intermediate_CAD.png
